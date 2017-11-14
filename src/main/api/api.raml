@@ -1,0 +1,50 @@
+#%RAML 0.8
+title: Employee Portal API
+version: 1.0
+
+/employees:
+  get:
+    responses: 
+      200:
+        body: 
+          application/json:
+            example: |
+              {"id":123}
+/add_emp:
+  post:
+    body: 
+      application/json:
+        example: |
+          {"id":123,"name":"singh"}
+          
+    responses: 
+      201:
+        body: 
+          application/json:
+            example: |
+              {"message":"employee added successfully"}
+            
+/update_emp:       
+  put:
+    body: 
+      application/json:
+        example: |
+          {"name":"singh"}
+          
+          
+    responses: 
+      200:
+        body: 
+          application/json:
+            example: |
+              {"message":"updated successfully"}
+    
+/disable_emp:
+  get:
+    responses: 
+      200:
+        body: 
+          application/json:
+            example: |
+                {"message":"employee status disabled"}
+  
